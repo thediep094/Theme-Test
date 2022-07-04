@@ -1,0 +1,75 @@
+
+<div class="wrapper">
+  <div class="top">
+    <h1 class="text1">{{section.settings.title1}} <span class="span">{{section.settings.span}}</span> {{section.settings.title2}}</h1>
+    <p class="des">{{section.settings.discription}}</p>
+  </div>
+  <div class="bot">
+    {% for block in section.blocks %}
+    <div class="item">
+      	<div class="wrapperImage"><img src="{{ block.settings.image | img_url: '600x' }}" loading="lazy" class="image"></div>
+      	<h1 class="h1">{{block.settings.imgTitle}}</h1>
+      	<p class="p">{{block.settings.desTitle}}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "test",
+    "settings": [
+		{
+			"type" : "text",
+			"label" : "title1",
+			"id" : "title1"
+		},
+
+		{
+			"type" : "text",
+			"label" : "span",
+			"id" : "span"
+		},
+		{		
+			"type" : "text",
+			"label" : "title2",
+			"id" : "title2"
+		},
+
+		{
+			"type" : "text",
+			"label" : "your description",
+			"id" : "discription"
+		}
+    ],
+
+	
+    "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+		{
+			"type":"text",
+			"id":"imgTitle",
+			"label":"imgTitle"
+		},
+        {
+			"type":"text",
+			"id":"desTitle",
+			"label":"desTitle"
+		}
+       ]
+     }
+   ]
+
+  }
+{% endschema %}
+
+
