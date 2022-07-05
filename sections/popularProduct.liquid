@@ -1,14 +1,21 @@
 {% assign collection = collections['all'] %}
-{% for product in collection.products %}
-	<div>
-       <img src="{{ product.images[0] | product_img_url: 'medium' }}" alt="">
-       	{{product.tags[0]}} 
-      	{{product.title}}
-        {{product.price | money }}
-        {{product.description}}
+<div class="home">
+    <div class="top">
+        <h1 class="title">{{section.settings.title}}</h1>
+        <p class="des">{{section.settings.description}}</p>
     </div>
-{% endfor %}
-
+    <div class="items">
+        {% for product in collection.products %}
+        <div class="item">
+            <img src="{{ product.images[0] | product_img_url: 'medium' }}" alt="">
+            {{product.title}}
+            {{product.tags[0]}}
+            {{product.price | currency}}
+            {{product.description}}
+        </div>
+    {% endfor %}
+    </div>
+</div>
 {% schema %}
   {
     "name": "Section name",
