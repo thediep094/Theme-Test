@@ -2,7 +2,8 @@
 {{collection.title}}
 {% for product in collection.products %}
 	<div>
- 		<img src="{{product.media | where: "alt", "primary-image"}}" alt="">
+ 		{% assign images = product.media | where: "alt", "main-image" %}
+      {{ images[0] | img_tag }}
         {{product.title}}
     </div>
 {% endfor %}
