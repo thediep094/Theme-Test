@@ -1,6 +1,10 @@
 {% assign collection = collections['all'] %}
 {{collection.title}}
-
+{% for product in collection.products %}
+	<li>
+		{{product.title}}
+	</li>
+{% endfor %}
 
 {% schema %}
   {
