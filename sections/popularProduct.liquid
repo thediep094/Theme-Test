@@ -7,11 +7,15 @@
     <div class="items">
         {% for product in collection.products %}
         <div class="item">
-            <img src="{{ product.images[0] | product_img_url: 'medium' }}" alt="">
-            {{product.title}}
-            {{product.tags[0]}}
+            <img src="{{ product.images[0] | product_img_url: 'medium' }}" alt="" class="img">
+            <span class="tag"> {{product.tags[0]}}</span>
+            <h1 class="itemTitle">
+                {{product.title}}
+            </h1>
+            <p class="price">
             {{product.price | currency}}
-            {{product.description}}
+            </p>
+            <p class="description">{{product.description}}</p>
         </div>
     {% endfor %}
     </div>
