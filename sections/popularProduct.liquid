@@ -2,8 +2,9 @@
 {{collection.title}}
 {% for product in collection.products %}
 	<div>
- 		{% assign images = product.media | where: "alt", "main-image" %}
-      {{ images[0] | img_tag }}
+ 	{% for image in product.images offset:1 limit:1 %}
+   <img src="{{ image.src | product_img_url: '500x' }}">
+{% endfor %}
         {{product.title}}
     </div>
 {% endfor %}
