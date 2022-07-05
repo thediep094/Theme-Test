@@ -2,7 +2,7 @@
 {{collection.title}}
 {% for product in collection.products %}
 	<div>
-		{{product.images}}
+        <img src="{{ product.images[0] | product_img_url: 'medium' }}" alt="">
         {{product.title}}
     </div>
 {% endfor %}
