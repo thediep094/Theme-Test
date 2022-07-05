@@ -1,5 +1,4 @@
 {% assign collection = collections['all'] %}
-{{collection.title}}
 {% for product in collection.products %}
 	<div>
        <img src="{{ product.images[0] | product_img_url: 'medium' }}" alt="">
