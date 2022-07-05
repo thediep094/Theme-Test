@@ -70,11 +70,12 @@
 }
 
 .itemTitle {
-  font-family: "Lato";
+  font-family: Lato;
   font-style: normal;
-  font-weight: 500;
-  font-size: 19px;
-  line-height: 146%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 117%;
+  text-align: center;
   color: #894722;
 }
 
@@ -83,6 +84,14 @@
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
-  line-height: 146%;
   color: #894722;
+}
+
+.price {
+  color: red;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 146%;
 }
