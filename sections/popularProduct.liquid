@@ -1,9 +1,10 @@
 {% assign collection = collections['all'] %}
 {{collection.title}}
 {% for product in collection.products %}
-	<li>
-		{{product.title}}
-	</li>
+	<div>
+        {{product.images}}
+        {{product.title}}
+    </div>
 {% endfor %}
 
 {% schema %}
