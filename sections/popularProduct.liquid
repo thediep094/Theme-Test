@@ -15,7 +15,7 @@
             <p class="price">
             {{product.price | money}}
           </p>
-          {{product.variant.compare_at_price}}
+          {{product.compare_at_price | money}}
         </div>
     {% endfor %}
     </div>
