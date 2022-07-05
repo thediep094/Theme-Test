@@ -2,9 +2,7 @@
 {{collection.title}}
 {% for product in collection.products %}
 	<div>
- 	{% for image in product.images offset:1 limit:1 %}
-   <img src="{{ image.src | product_img_url: '500x' }}">
-{% endfor %}
+		{{product.images}}
         {{product.title}}
     </div>
 {% endfor %}
