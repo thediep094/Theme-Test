@@ -61,9 +61,28 @@
   flex-direction: column;
   border-radius: 15px;
   background-color: white;
+  overflow: hidden;
 }
 .img {
   width: 100%;
   height: 300px;
   object-fit: cover;
+}
+
+.itemTitle {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 146%;
+  color: #894722;
+}
+
+.tag {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 146%;
+  color: #894722;
 }
