@@ -2,7 +2,7 @@
 {{collection.title}}
 {% for product in collection.products %}
 	<div>
- 		<img src="{{product.media | img_url: '600x' }}" alt="">
+ 		<img src="{{product.media | where: "alt", "primary-image"}}" alt="">
         {{product.title}}
     </div>
 {% endfor %}
