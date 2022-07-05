@@ -1,0 +1,15 @@
+{% assign collection = collections['all'] %}
+{{collection.title}}
+{% for product in collection.products %}
+	<li>
+		{{product.title}}
+	</li>
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
