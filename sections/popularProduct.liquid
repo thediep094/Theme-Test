@@ -5,7 +5,7 @@
        <img src="{{ product.images[0] | product_img_url: 'medium' }}" alt="">
         {{product.title}}
         {{product.tags[0]}}
-        {{product.price}}
+        {{product.price | currency }}
         {{product.description}}
     </div>
 {% endfor %}
