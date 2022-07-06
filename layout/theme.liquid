@@ -9,6 +9,7 @@
   {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.scss.css' | asset_url | stylesheet_tag }}
   {{ 'application.js' | asset_url | script_tag }}
+  {{ 'customElement.js' | asset_url | script_tag }}
 
   {{ 'popularProduct.css' | asset_url | stylesheet_tag }}
 
