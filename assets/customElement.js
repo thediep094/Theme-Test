@@ -1,10 +1,13 @@
-class Test extends HTMLElement {
-  constructor(){
-  	super()
-    this.addEventListener('click', _ => {
-      console.log('I have been hovered');
+class MyCustomElement extends HTMLElement {
+  constructor() {
+    super();
+
+    var self = this;
+
+    self.addEventListener('click', _ => {
+      self.innerHTML = '<b> I have been clicked </b>';
     });
-  
   }
 }
-customElements.define('test', Test);
+
+customElements.define('my-custom-element', MyCustomElement);
