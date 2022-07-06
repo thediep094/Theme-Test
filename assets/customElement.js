@@ -17,7 +17,7 @@ class DiepElement extends HTMLElement{
 
   constructor(){
   	super();
-    this.addEventlistener('mouseenter', _ =>{
+    this.addEventlistener('click', _ =>{
    		this.innerHTML = '<p style="color: red"> I have been hovered </p>';
     })
   }
