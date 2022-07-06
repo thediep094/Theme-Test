@@ -11,3 +11,15 @@ class MyCustomElement extends HTMLElement {
 }
 
 customElements.define('my-custom-element', MyCustomElement);
+
+
+class DiepElement extends HTMLElement{
+
+  constructor(){
+  	super();
+    this.addEventlistener('hover', _ =>{
+   		this.innerHTML = '<p style="color: red"> I have been hovered </p>';
+    })
+  }
+
+}
