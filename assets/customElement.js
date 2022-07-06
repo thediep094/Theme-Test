@@ -19,7 +19,7 @@ class DiepElement extends HTMLElement{
   	super();
     this.addEventlistener('click', _ =>{
    		this.innerHTML = '<p style="color: red"> I have been hovered </p>';
-    })
+    });
   }
 
 }
