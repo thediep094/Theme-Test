@@ -5,7 +5,7 @@ class MyCustomElement extends HTMLElement {
     var self = this;
 
     self.addEventListener('click', _ => {
-      self.innerHTML = '<b> I have been clicked </b>';
+      self.innerHTML = '<b style="color: red"> I have been clicked </b>';
     });
   }
 }
