@@ -23,3 +23,5 @@ class DiepElement extends HTMLElement{
   }
 
 }
+
+customElements.define('diep-element', DiepElement);
